@@ -16,7 +16,7 @@ class _JuzListScreenState extends State<JuzListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Surah List'),
+        title: const Text('Juz List'),
       ),
       body: ListView.builder(
         itemCount: Quran.getJuzAsList().length,
