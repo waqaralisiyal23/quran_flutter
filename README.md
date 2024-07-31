@@ -2,17 +2,20 @@
 
 `quran_flutter` is a Flutter package designed to provide access to the text of the Quran in multiple languages, sourced from [Tanzil.net](https://tanzil.net). Metadata about Surahs (chapters), Verses, and Juzs (sections) is also provided.
 
+## Screenshots
+
 <p align="center">
-  <img src="screenshots/1.jpeg" alt="Home Screen" width="200" />
-  <img src="screenshots/2.jpeg" alt="Surah List" width="200" />
-  <img src="screenshots/3.jpeg" alt="Verse List" width="200" />
-  <img src="screenshots/4.jpeg" alt="Read Surah" width="200" />
-  <img src="screenshots/5.jpeg" alt="Read Juz" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/1.jpeg" alt="Home Screen" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/2.jpeg" alt="Surah List" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/3.jpeg" alt="Verse List" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/4.jpeg" alt="Read Surah" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/5.jpeg" alt="Read Juz" width="200" />
 </p>
 
 ## Table of Contents
 
 - [Quran Flutter](#quran-flutter)
+  - [Screenshots](#screenshots)
   - [Table of Contents](#table-of-contents)
   - [Getting started](#getting-started)
   - [Installation](#installation)
