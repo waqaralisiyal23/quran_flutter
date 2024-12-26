@@ -187,6 +187,12 @@ class Quran {
     return _juzMap[juzNumber]!.surahVerses.values.toList();
   }
 
+  /// Retrieves the total number of verses in a page.
+  static int getTotalVersesInPage(int pageNumber) {
+    _validatePageNumberArgument(pageNumber);
+    return _pageMap[pageNumber]!.verseCount;
+  }
+
   /// Retrieves the surah verses in a page as a map.
   static Map<int, PageSurahVerses> getSurahVersesInPageAsMap(int pageNumber) {
     _validatePageNumberArgument(pageNumber);
@@ -234,6 +240,43 @@ class Quran {
       }
     });
     return juzNumber;
+  }
+
+  /// Retrieves the total number of verses of a surah in a specific page.
+  ///
+  /// Throws an [ArgumentError] if the surah is not in the specified page.
+  static int getTotalVersesOfSurahInPage({
+    required int surahNumber,
+    required int pageNumber,
+  }) {
+    _validateSurahNumberArgument(surahNumber);
+    _validatePageNumberArgument(pageNumber);
+    QuranPage page = _pageMap[pageNumber]!;
+    if (page.surahVerses.containsKey(surahNumber) == false) {
+      throw ArgumentError('Surah $surahNumber is not in Page $pageNumber');
+    }
+    return page.surahVerses[surahNumber]!.verseCount;
+  }
+
+  /// Retrieves the juz number that contains the specified surah and verse.
+  static int getPageNumber({
+    required int surahNumber,
+    required int verseNumber,
+  }) {
+    _validateSurahNumberAndVerseNumberArgument(
+      surahNumber: surahNumber,
+      verseNumber: verseNumber,
+    );
+    late int pageNumber;
+    _pageMap.forEach((key, value) {
+      if (value.surahVerses.containsKey(surahNumber)) {
+        if (verseNumber >= value.surahVerses[surahNumber]!.startVerseNumber &&
+            verseNumber <= value.surahVerses[surahNumber]!.endVerseNumber) {
+          pageNumber = key;
+        }
+      }
+    });
+    return pageNumber;
   }
 
   /// Validates the surah number argument.
