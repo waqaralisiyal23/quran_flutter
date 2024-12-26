@@ -3,6 +3,8 @@ import 'package:quran_flutter/enums/surah_type.dart';
 import 'enums/quran_language.dart';
 import 'models/juz.dart';
 import 'models/juz_surah_verses.dart';
+import 'models/page.dart';
+import 'models/page_surah_verses.dart';
 import 'models/surah.dart';
 import 'models/verse.dart';
 import 'utils/asset_loader.dart';
@@ -16,6 +18,8 @@ class Quran {
   static late final List<Map<int, Map<int, Verse>>> _translatedQuranVerses;
   static late final Map<int, Juz> _juzMap;
   static late final List<Juz> _juzList;
+  static late final Map<int, QuranPage> _pageMap;
+  static late final List<QuranPage> _pageList;
 
   /// The Bismillah phrase.
   static const String bismillah = 'بِسْمِ اللَّهِ الرَّحْمَـٰنِ الرَّحِيمِ';
@@ -35,6 +39,9 @@ class Quran {
   /// Total number of juz in the Quran.
   static const int juzCount = 30;
 
+  /// Total number of pages in the Quran.
+  static const int pageCount = 604;
+
   /// Initializes the Quranic data and translations.
   ///
   /// This method loads the Quranic text and translations from the assets.
@@ -45,6 +52,8 @@ class Quran {
     _translatedQuranVerses = await AssetLoader.loadTranslatedQuranText();
     _juzMap = MetaDataLoader.loadJuz();
     _juzList = _juzMap.values.toList();
+    _pageMap = MetaDataLoader.loadPages();
+    _pageList = _pageMap.values.toList();
   }
 
   /// Retrieves the Quranic verses in the specified language.
@@ -154,6 +163,12 @@ class Quran {
   /// Retrieves the list of all juz.
   static List<Juz> getJuzAsList() => _juzList;
 
+  /// Retrieves the map of all pages.
+  static Map<int, QuranPage> getPageAsMap() => _pageMap;
+
+  /// Retrieves the list of all pages.
+  static List<QuranPage> getPageAsList() => _pageList;
+
   /// Retrieves the total number of verses in a juz.
   static int getTotalVersesInJuz(int juzNumber) {
     _validateJuzNumberArgument(juzNumber);
@@ -170,6 +185,18 @@ class Quran {
   static List<JuzSurahVerses> getSurahVersesInJuzAsList(int juzNumber) {
     _validateJuzNumberArgument(juzNumber);
     return _juzMap[juzNumber]!.surahVerses.values.toList();
+  }
+
+  /// Retrieves the surah verses in a page as a map.
+  static Map<int, PageSurahVerses> getSurahVersesInPageAsMap(int pageNumber) {
+    _validatePageNumberArgument(pageNumber);
+    return _pageMap[pageNumber]!.surahVerses;
+  }
+
+  /// Retrieves the surah verses in a page as a list.
+  static List<PageSurahVerses> getSurahVersesInPageAsList(int pageNumber) {
+    _validatePageNumberArgument(pageNumber);
+    return _pageMap[pageNumber]!.surahVerses.values.toList();
   }
 
   /// Retrieves the total number of verses of a surah in a specific juz.
@@ -246,6 +273,17 @@ class Quran {
     );
     if (juzNumber < 1 || juzNumber > juzCount) {
       throw ArgumentError('Juz number must be between 1 and 30');
+    }
+  }
+
+  /// Validates the page number argument.
+  static void _validatePageNumberArgument(int pageNumber) {
+    assert(
+      pageNumber >= 1 && pageNumber <= pageCount,
+      'Juz number must be between 1 and 604',
+    );
+    if (pageNumber < 1 || pageNumber > pageCount) {
+      throw ArgumentError('Juz number must be between 1 and 604');
     }
   }
 }

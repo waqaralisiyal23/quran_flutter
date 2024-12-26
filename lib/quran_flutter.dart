@@ -6,6 +6,7 @@ library quran_flutter;
 export 'quran.dart';
 export 'enums/quran_language.dart';
 export 'enums/surah_type.dart';
+export 'models/page.dart';
 export 'models/juz.dart';
 export 'models/juz_surah_verses.dart';
 export 'models/surah.dart';

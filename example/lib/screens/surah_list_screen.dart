@@ -32,10 +32,7 @@ class _SurahListScreenState extends State<SurahListScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => VersesScreen(
-                      isSurah: true,
-                      surah: surah,
-                    ),
+                    builder: (context) => VersesScreen.ofSurah(surah),
                   ),
                 );
               },
