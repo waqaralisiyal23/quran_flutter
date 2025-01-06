@@ -20,7 +20,7 @@ class VerseDataItem extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withValues(alpha: 0.2),
             width: 1,
           ),
         ),
@@ -30,7 +30,7 @@ class VerseDataItem extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 20,
-            backgroundColor: Colors.grey.withOpacity(0.2),
+            backgroundColor: Colors.grey.withValues(alpha: 0.2),
             child: Text(
               verse.verseNumber.toString(),
               style: const TextStyle(fontSize: 16),

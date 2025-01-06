@@ -16,7 +16,7 @@ class _QuranPageListScreenState extends State<QuranPageListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Juz List'),
+        title: const Text('Page List'),
       ),
       body: ListView.builder(
         itemCount: Quran.getPageAsList().length,

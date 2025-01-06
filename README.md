@@ -5,11 +5,13 @@
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/1.jpeg" alt="Home Screen" width="200" />
-  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/2.jpeg" alt="Surah List" width="200" />
-  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/3.jpeg" alt="Verse List" width="200" />
-  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/4.jpeg" alt="Read Surah" width="200" />
-  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/5.jpeg" alt="Read Juz" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/1.png" alt="Home Screen" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/2.png" alt="Surah List" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/3.png" alt="Juz List" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/4.png" alt="Page List" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/5.png" alt="Read Surah" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/6.png" alt="Read Juz" width="200" />
+  <img src="https://github.com/waqaralisiyal23/quran_flutter/raw/main/screenshots/7.png" alt="Read Page" width="200" />
 </p>
 
 ## Table of Contents
@@ -33,6 +35,9 @@
     - [Feature Requests](#feature-requests)
     - [Pull Requests](#pull-requests)
     - [Conclusion](#conclusion)
+  - [Contributors](#contributors)
+    - [@waqaralisiyal23](#waqaralisiyal23)
+    - [@dasyad00](#dasyad00)
   - [License](#license)
 
 ## Getting started
@@ -315,6 +320,27 @@ Your pull request will be reviewed by the project maintainers, and feedback may 
 ### Conclusion
 
 Thank you for considering contributing to `quran_flutter`. Your contributions are valued and help improve the project for everyone. Happy coding!
+
+## Contributors
+
+Thanks to the following amazing people who contributed to this project:
+
+### [@waqaralisiyal23](https://github.com/waqaralisiyal23)
+
+![Your Profile Picture](https://github.com/waqaralisiyal23.png?size=100)
+
+- **Name:** Waqar Ali Siyal
+- **Role:** Creator and maintainer of the Quran Flutter package.
+- **Contributions:** Developed the package, implemented core features, maintained the project, and added several enhancements.
+- **GitHub Profile:** [waqaralisiyal23](https://github.com/waqaralisiyal23)
+
+### [@dasyad00](https://github.com/dasyad00)
+
+![dasyad00's Profile Picture](https://github.com/dasyad00.png?size=100)
+
+- **Name:** Danang Rahmatullah
+- **Contributions:** Added Quran pages data along with example.
+- **GitHub Profile:** [dasyad00](https://github.com/dasyad00)
 
 ## License
 
