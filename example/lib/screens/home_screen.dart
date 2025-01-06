@@ -1,3 +1,4 @@
+import 'package:example/screens/page_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:quran_flutter/quran_flutter.dart';
 
@@ -68,6 +69,18 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text('Juz List'),
+            ),
+            const SizedBox(height: 12),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const QuranPageListScreen(),
+                  ),
+                );
+              },
+              child: const Text('Page List'),
             ),
           ],
         ),

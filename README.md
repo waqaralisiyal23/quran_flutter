@@ -1,6 +1,6 @@
 # Quran Flutter
 
-`quran_flutter` is a Flutter package designed to provide access to the text of the Quran in multiple languages, sourced from [Tanzil.net](https://tanzil.net). Metadata about Surahs (chapters), Verses, and Juzs (sections) is also provided.
+`quran_flutter` is a Flutter package designed to provide access to the text of the Quran in multiple languages, sourced from [Tanzil.net](https://tanzil.net). Metadata about Surahs (chapters), Verses, Juzs (sections), and Pages is also provided.
 
 ## Screenshots
 
@@ -26,6 +26,7 @@
   - [Surah Methods](#surah-methods)
   - [Verse Methods](#verse-methods)
   - [Juz Methods](#juz-methods)
+  - [Page Methods](#page-methods)
   - [Example](#example)
   - [Contributing](#contributing)
     - [Bug Reports](#bug-reports)
@@ -235,6 +236,22 @@ print(verseEnglish.text);
 - **`int getTotalVersesOfSurahInJuz({required int surahNumber, required int juzNumber})`** - Retrieves the total number of verses of the specified surah within the specified juz.
 
 - **`int getJuzNumber({required int surahNumber, required int verseNumber})`** - Retrieves the juz number of the specified surah and verse.
+
+## Page Methods
+
+- **`Map<int, QuranPage> getPageAsMap()`** - Retrieves a map of all pages with their corresponding numbers.
+
+- **`List<QuranPage> getPageAsList()`** - Retrieves a list of all pages.
+
+- **`int getTotalVersesInPage(int pageNumber)`** - Retrieves the total number of verses in the specified page.
+
+- **`Map<int, PageSurahVerses> getSurahVersesInPageAsMap(int pageNumber)`** - Retrieves the verses of each surah within the specified page as a map.
+
+- **`List<PageSurahVerses> getSurahVersesInPageAsList(int pageNumber)`** - Retrieves the verses of each surah within the specified page as a list.
+
+- **`int getTotalVersesOfSurahInPage({required int surahNumber, required int pageNumber})`** - Retrieves the total number of verses of the specified surah within the specified page.
+
+- **`int getPageNumber({required int surahNumber, required int verseNumber})`** - Retrieves the page number of the specified surah and verse.
 
 **Usage:**
 
