@@ -1,5 +1,6 @@
 # Changelog
 
-## [1.0.2] - 2024-07-31
+## [1.0.3] - 2025-01-06
 
-- Initial release
+- Added Quran Pages Data
+- Updated example with the new feature.
